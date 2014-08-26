@@ -34,27 +34,28 @@ This module handles requests to files with extension `*.less` that are stored in
 ### Installation instructions
 ------------
 
-There are several ways you can use this module in Sitefinity.
+There are several ways you can use this module in Sitefinity:
 
-Since the module depends on the Sitefiinty assembly you should add a reference to Sitefinity assembly (from the bin folder of your Sitefinity project).
+1. Direct usage in SitefinityWebApp without cloning this repository
 
-The build order is as follows:
+- Install Telerik.Sitefinity.Less.7.1.5207.nupkg following the instructions on the [nuget server](http://nuget.sitefinity.com/).
+- Build the Sitefinity project
+- Open Sitefinity in a browser and navigate to Aministration -> Modules and services
+- Activate Less module
 
-- Build the Sitefinity assembly.
-- Build the Telerik.Less assembly.
-- Build Telerik.Sitefinity.Less assembly.
-- Copy the Telerik.Sitefinity.Less assembly to the bin folder of the Sitefinity application.
-- Copy the Telerik.Less assembly to the bin folder of the Sitefinity application.
 
-After you build the Telerik.Less and Telerik.Sitefinity.Less modules you should copy their assemblies from each modules's Debug folder and transfer the assemblies to the bin folder of your SitefinityWebApp project. Build SitefinityWebApp.
+2. If your Sitefinity project version is different than any of the [releases](https://github.com/Sitefinity/Less/releases) versions, you need to follow the instructions below:
 
-With the current implementation the Less module is self-registered. Once you copy the assembly to the bin folder of the application on the next load the module would be automatically registered. 
+- Clone the Less repository.
+- Open your solution in Visual Studio and build it.
+- Open your Sitefinity project and copy the Telerik.Sitefinity.Less.dll and Telerik.Less.dll assemblies to the bin folder of your SitefinityWebApp.
+- Build your Sitefinity web project.
+
+*NOTE*: With the current implementation the Less module is self-registered. Once you copy the assemblies to the bin folder of the application on the next load the module would be automatically registered. 
 
 This behavior could be changed if you remove the `PreApplicationStartMethodAttribute` from the `AssemblyInfo.cs` file of the `Telerik.Sitefinity.Less` project and add the call to the `RegisterModule` method in the `Initialize` method of the `LessModule.cs` file.
 
-What you need to do next is go to `Administration -> Modules and services` and activate the Less module.
-
-Another approach is to create new solution that holds the Sitefinity project, `Telerik.Less` and `Telerik.Sitefinity.Less` projects. Then you could configure the output folder of `Telerik.Less` and `Telerik.Sitefinity.Less` projects to be the Sitefinity application's bin folder. Thus when you build the solution the module will be copied automatically and you would need to only refresh the page.
+- What you need to do next is go to `Administration -> Modules and services` and activate the Less module.
 
 Ensure that the account that will use the module (the application pool identity if the application is hosted in IIS, e.g. `IIS APPPOOL\[applicationpoolname]`) should have write permissions to the `Temp` folder (`C:\Windows\Temp` or `C:\Users\user\AppData\Local\Temp`).
 
