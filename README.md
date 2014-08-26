@@ -1,7 +1,7 @@
 LESS Support
 ============
 
-General Information
+### General Information
 -------------------
 
 The solution contains projects for compilation of LESS syntax to CSS styles.
@@ -9,20 +9,21 @@ The solution contains projects for compilation of LESS syntax to CSS styles.
 - `Telerik.Less` - contains the compiler that takes the LESS input and returns the CSS output.
 - `Telerik.Less.Test` - contains unit tests for the compiler.
 - `Telerik.Sitefinity.Less` - contains the Sitefinity module that adds the compiler functionality to Telerik Sitefinity product.
-- `Telerik.Sitefinity.Less.TestIntegration` - contains the integration tests for Sitefinity product.
 
-Requirements
+### Requirements
 ------------
 
-- `Telerik.Sitefinity` assembly, version 6.1 or higher
-- `Telerik.Sitefinity.Model` assembly, version 6.1 or higher
-- `Telerik.Sitefinty.Utility` assembly, version 6.1 or higher
-- `Telerik.OpenAccess assembly`, version 2013.2.807 or higher
-- `Telerik.Windows.Zip assembly`, version 2013.1.415 or higher
-- Approximately 10 MB of disk space.
-- The account that will use the module (the application pool identity if the application is hosted in IIS) should have write permissions to the Temp folder (`C:\Windows\Temp or C:\Users\user\AppData\Local\Temp`).
+ The account that will use the module (the application pool identity if the application is hosted in IIS) should have write permissions to the Temp folder (`C:\Windows\Temp or C:\Users\user\AppData\Local\Temp`).
 
-Features
+### Prerequisites
+
+Clear the NuGet cache files. To do this:
+
+1. In Windows Explorer, open the **%localappdata%\NuGet\Cache** folder.
+2. Select all files and delete them.
+
+
+### Features
 --------
 
 This module handles requests to files with extension `*.less` that are stored in the following locations:
@@ -30,7 +31,7 @@ This module handles requests to files with extension `*.less` that are stored in
 - `Sitefinity_application\App_Themes\ThemeName\`
 - `Sitefinity_application\App_Data\Sitefinity\WebsiteTemplates\`
 
-Installation
+### Installation instructions
 ------------
 
 There are several ways you can use this module in Sitefinity.
@@ -57,7 +58,7 @@ Another approach is to create new solution that holds the Sitefinity project, `T
 
 Ensure that the account that will use the module (the application pool identity if the application is hosted in IIS, e.g. `IIS APPPOOL\[applicationpoolname]`) should have write permissions to the `Temp` folder (`C:\Windows\Temp` or `C:\Users\user\AppData\Local\Temp`).
 
-Troubleshooting
+### Troubleshooting
 ---------------
 
 - Please note that in order for the module to work correctly you need to copy not only the module assembly (`Telerik.Sitefinity.Less.dll`) but the compiler assembly (`Telerik.Less.dll`) as well to the bin folder of the application.
