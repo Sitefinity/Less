@@ -1,9 +1,6 @@
 LESS Support
 ============
 
-### General Information
--------------------
-
 The solution contains projects for compilation of LESS syntax to CSS styles.
 
 - `Telerik.Less` - contains the compiler that takes the LESS input and returns the CSS output.
