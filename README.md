@@ -1,6 +1,8 @@
 LESS Support
 ============
 
+[![Build Status](http://sdk-jenkins-ci.cloudapp.net/job/Telerik.Sitefinity.Samples.Less.CI/badge/icon)](http://sdk-jenkins-ci.cloudapp.net/job/Telerik.Sitefinity.Samples.Less.CI/)
+
 The solution contains projects for compilation of LESS syntax to CSS styles.
 
 - `Telerik.Less` - contains the compiler that takes the LESS input and returns the CSS output.
