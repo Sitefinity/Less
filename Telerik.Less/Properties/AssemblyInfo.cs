@@ -9,7 +9,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Telerik")]
 [assembly: AssemblyProduct("Telerik.Less")]
-[assembly: AssemblyCopyright("Copyright ©  2013 Telerik")]
+[assembly: AssemblyCopyright("Copyright ©  2016 Telerik")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

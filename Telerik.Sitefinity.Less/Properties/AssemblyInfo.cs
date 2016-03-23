@@ -12,7 +12,7 @@ using Telerik.Sitefinity.Less;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Telerik")]
 [assembly: AssemblyProduct("Telerik.Sitefinity.Less")]
-[assembly: AssemblyCopyright("Copyright ©  2013 Telerik")]
+[assembly: AssemblyCopyright("Copyright ©  2016 Telerik")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
